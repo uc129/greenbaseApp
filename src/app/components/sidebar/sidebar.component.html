@@ -1,0 +1,64 @@
+<div class="w-[20vw]  min-w-[180px] max-w-[240px] bg-[#f5f6fa] text-xs min-h-[93vh] p-4 border-r-[1px] border-gray-400">
+
+
+
+    <div *ngFor="let link of main_links" class="text-xs w-full">
+
+        <a class="flex  items-center justify-between w-full h-[50px]
+             hover:bg-[#F0F0F0] hover:text-[#00A3FF] px-1">
+
+            <div class="flex">
+                <img class="w-5" src="{{link.icon}}" alt="">
+                <p class="text-gray-400 text-[14px] font-bold ml-[10px] text-xs">{{link.name}}</p>
+            </div>
+
+            <span *ngIf="link.number"
+                class="bg-black text-white w-8 h-3 flex items-center justify-center rounded-e-lg rounded-s-lg">{{link.number}}
+            </span>
+        </a>
+
+
+    </div>
+
+
+    <div class="pt-8 text-gray-400 text-xs">
+        <p class="text-[10px] pb-2">Other Information</p>
+
+        <div *ngFor="let link of other_links" class="text-xs">
+
+            <a class="flex  items-center justify-between w-full h-[50px]
+             hover:bg-[#F0F0F0] hover:text-[#00A3FF] px-1">
+
+                <div class="flex">
+                    <img class="w-5" src="{{link.icon}}" alt="">
+                    <p class="text-gray-400 text-[14px] font-bold ml-[10px] text-xs">{{link.name}}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="pt-8 text-gray-400 text-xs">
+        <p class="text-[10px] pb-2">Settings</p>
+
+        <div *ngFor="let link of settings_links" class="text-xs">
+
+            <a class="flex  items-center justify-between w-full h-[50px]
+             hover:bg-[#F0F0F0] hover:text-[#00A3FF] px-1">
+
+                <div class="flex">
+                    <img class="w-5" src="{{link.icon}}" alt="">
+                    <p class="text-gray-400 text-[14px] font-bold ml-[10px] text-xs">{{link.name}}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>

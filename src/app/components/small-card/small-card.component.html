@@ -1,0 +1,26 @@
+<div class="wrapper bg-white w-full h-32 p-4 text-gray-500">
+
+    <div class="body h-[90%] border-r-[1px] border-gray-200">
+        <div class="flex flex-col">
+            <h5 class="text-xs">{{title}}</h5>
+            <h1 class="text-lg font-bold text-black">{{number}}</h1>
+        </div>
+
+
+        <div class="flex items-center text-xs pt-4 gap-8">
+            <span [ngClass]="{'text-green-400':increase, 'text-red-400':!increase}">{{percent}}</span>
+
+            <ng-container *ngIf="increase; else decrease">
+                <img class="w-6 ml-2" src="../../../assets/images/arrow-up.svg" alt="">
+            </ng-container>
+
+            <ng-template #decrease>
+                <img class="w-6 ml-2" src="../../../assets/images/arrow-down.svg" alt="">
+            </ng-template>
+
+
+        </div>
+
+    </div>
+
+</div>

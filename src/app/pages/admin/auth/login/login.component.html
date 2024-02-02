@@ -1,0 +1,59 @@
+<div class='wrapper h-screen w-screen bg-gray-200 flex  '>
+
+    <div class="parent mt-44 flex flex-col items-center gap-4
+     text-gray-400 bg-white w-[23%] min-w-[400px] min-h-[600px] h-[60%] mx-auto ">
+
+        <h1 class="text-2xl font-bold text-black mt-10">{{header}}</h1>
+        <p class="text-sm">{{subheader}} <a href="/register" class="text-blue-500"> {{subheaderLinkText}}</a></p>
+
+        <form action="" class="w-full">
+
+            <div class="form-group">
+                <label for="email">{{email}}</label>
+                <input type="email" id="email" placeholder={{emailPlaceholder}} class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="password">{{password}}</label>
+                <input type="password" id="password" placeholder={{passwordPlaceholder}} class="form-control">
+            </div>
+
+            <div class=" flex px-8 items-center gap-4 text-sm ">
+                <input type="checkbox" id="remember">
+                <label for="remember">Keep me signed in</label>
+            </div>
+
+            <div class=" flex  px-8 text-white text-sm mt-4  items-center justify-center">
+                <button class="btn btn-primary  bg-blue-500 w-full p-2 ">{{action}}</button>
+            </div>
+        </form>
+
+        <div class="border-b-[1px] border-gray-400 w-[80%] flex justify-center pb-8">
+            <a href={{subActionHref}} class="text-blue-500 text-sm">{{subAction}}</a>
+        </div>
+
+
+        <div class="w-full flex flex-col text-xs justify-center items-center text-blue-500  gap-8">
+            <p class="text-gray-400">{{socialText}}</p>
+
+            <div class=" flex flex-col w-full px-8 text-sm  items-center justify-center gap-2">
+
+
+                <a href="{{googleLink}}" class="btn btn-social flex justify-center gap-4  ">
+                    <img class="w-4" src="../../../../assets/images/google.svg" alt="">
+                    Continue with Google
+                </a>
+
+
+                <a href="{{facebookLink}}" class="btn btn-social flex justify-center gap-4  ">
+                    <img class="w-5" src="../../../../assets/images/facebook.svg" alt="">
+                    Continue with Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

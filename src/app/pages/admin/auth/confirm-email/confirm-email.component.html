@@ -1,0 +1,33 @@
+<div class='wrapper h-screen w-screen bg-gray-200 flex  '>
+
+    <div class="parent mt-44 flex flex-col items-center gap-4
+     text-gray-400 bg-white w-[23%] min-w-[400px] min-h-[300px] h-[45%] mx-auto ">
+
+        <h1 class="text-2xl font-bold text-black mt-10">{{header}}</h1>
+        <p class="text-sm">{{subheader}}</p>
+
+        <form action="" class="w-full">
+
+            <div class="form-group">
+                <label for="code">{{email}}</label>
+                <input type="text" id="code" placeholder={{emailPlaceholder}} class="form-control">
+            </div>
+
+
+
+
+            <div class=" flex  px-8 text-white text-sm my-4 pb-4   items-center justify-center">
+                <button class="btn btn-primary  bg-blue-500 w-full p-2 ">{{action}}</button>
+            </div>
+        </form>
+
+        <div
+            class="border-t-[1px] border-gray-400 w-[80%] flex gap-4 flex-col text-xs justify-center items-center pt-8 ">
+            <p>{{subActionText}}</p>
+            <a href={{subActionHref}}
+                class="text-blue-500 w-full mt-1 text-center p-2 border-[1px] border-gray-200 ">{{subAction}}</a>
+        </div>
+
+
+    </div>
+</div>
