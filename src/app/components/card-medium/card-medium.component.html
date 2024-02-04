@@ -1,0 +1,61 @@
+<!-- {
+    title: 'Collections Sold',
+    meta: [
+      {
+        name: 'Men',
+        value: 10,
+      },
+      {
+        name: 'Women',
+        value: 8,
+      },
+      {
+        name: 'Kids',
+        value: 7,
+      },
+    ],
+    progress: '45'
+  } -->
+
+<div class="bg-[#1e5eff] w-[75%] text-sm p-4 px-8 py-9 text-white h-full  rounded-lg">
+
+  <div *ngIf="data.backgroundImage" [style.backgroundImage]="'url(' + data.backgroundImage + ')'"
+    class="bg-contain bg-right bg-repeat-space">
+    <div class="flex flex-col">
+
+      <h1 class="pb-8 font-bold text-lg ">{{data.title}}</h1>
+
+      <ng-container *ngIf="data.subheading">
+        <p class=""> {{data.subheading}}</p>
+      </ng-container>
+
+      <ng-container *ngIf="data.buttonText || data.handleButtonClick">
+        <button class="py-2 px-1 mt-8 bg-blue-200 rounded-lg">{{data.buttonText}}</button>
+      </ng-container>
+
+    </div>
+  </div>
+
+
+  <div class="flex flex-col  w-full">
+
+    <div class="flex w-full mb-8 justify-center items-center">
+
+      <ng-container *ngIf="data.progress">
+        <div role="progressbar" [attr.aria-valuenow]="data.progress.toString()" aria-valuemin=" 0" aria-valuemax="100"
+          [style.--value]="data.progress">
+        </div>
+      </ng-container>
+    </div>
+
+    <ng-container *ngIf="data.meta">
+      <div class="flex w-full justify-between " *ngFor="let item of data.meta">
+        <p>{{item.name}}</p>
+        <p>{{item.value}}%</p>
+      </div>
+    </ng-container>
+  </div>
+
+
+
+</div>

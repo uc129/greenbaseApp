@@ -1,0 +1,30 @@
+<!-- listData = {
+data: [
+{ id: 1, name: 'John Doe', age: 25 },
+{ id: 2, name: 'Jane Doe', age: 30 },
+],
+columns: ['id', 'name', 'age']
+} -->
+
+
+<div class="h-full  w-full p-2 bg-white ">
+
+    <h1 class="font-bold p-4 pb-8">Top Salesman</h1>
+
+    <div class="header text-sm text-gray-400 flex gap-1 pb-2 mb-4 border-b-[2px] border-gray-200">
+        <div class="w-1/4" *ngFor="let column of listData.columns">{{column}}</div>
+    </div>
+
+    <div class="w-full flex mb-2 pb-2 border-b-[1px] last:border-0 border-gray-200 justify-between px-8"
+        *ngFor="let data of listData.data">
+        <div class="w-1/2 flex gap-8">
+            <div>
+                <img src="{{data.image}}" alt={{data.name}} class="w-8 rounded-full" />
+            </div>
+            <div> {{data.name}}</div>
+        </div>
+        <div class=' w-1/4'>{{data.sold}}</div>
+        <div class='w-1/4'>{{data.amount}}</div>
+    </div>
+
+</div>

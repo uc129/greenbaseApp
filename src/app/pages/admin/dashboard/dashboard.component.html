@@ -1,6 +1,7 @@
 <app-layout>
-    <div class="wrapper  w-full  min-h-[93vh] h-full bg-[#f5f6fa]">
-        <div class="body p-4 flex flex-col">
+    <div class="wrapper  w-full min-h-[93vh] h-full bg-[#f5f6fa]">
+
+        <div class="body p-4 mb-10 flex flex-col">
 
             <div class="header flex justify-between p-4">
                 <h1 class="text-xl font-bold">Dashboard</h1>
@@ -11,7 +12,7 @@
                 </button>
             </div>
 
-            <div class="w-full flex flex-wrap ">
+            <div class="w-full flex flex-wrap  ">
                 <div class="w-1/4" *ngFor="let data of cardData">
                     <app-small-card [title]="data.title" [number]="data.number" [percent]="data.percent"
                         [increase]="data.increase">
@@ -20,10 +21,45 @@
             </div>
 
 
-            <div>
+            <div class="">
                 <app-chart></app-chart>
             </div>
+
         </div>
+
+
+        <div class="flex w-full gap-4 justify-between pr-4">
+
+            <div class="w-1/2 ml-4 pb-10">
+                <app-list [listData]="listData"></app-list>
+            </div>
+
+            <!-- <div class="w-1/2 ml-4 pb-10">
+                <app-card-medium [data]="data"></app-card-medium>
+            </div> -->
+            <div>
+
+            </div>
+
+            <div class="flex gap-4  w-1/2 h-full pl-[4em] ">
+
+                <div class="w-1/2">
+                    <app-card-medium [data]="mediumCardData[0]"></app-card-medium>
+                </div>
+
+                <div class="w-1/2">
+                    <app-card-medium [data]="mediumCardData[1]"></app-card-medium>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
 
     </div>
 

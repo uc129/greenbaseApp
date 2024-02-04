@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CardMediumComponent } from '../card-medium/card-medium.component';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, CardMediumComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
@@ -104,6 +105,14 @@ export class SidebarComponent {
       icon: '../../../assets/sidebar-icons/settings.svg'
     }
   ]
+
+  cardData = {
+    title: 'Grow Business',
+    subheading: 'Explore Our marketing Solutions',
+    buttonText: 'Read More',
+    backgroundImage: '../../../assets/sidebar-icons/grow-business.svg'
+
+  }
 
 }
 
